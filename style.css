@@ -1,0 +1,8 @@
+div img {
+    max-width: 100%;
+}
+
+.tree {
+	display: flex;
+    justify-content: space-around;
+}

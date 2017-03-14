@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="js/js.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <input type="text" id="addInput">
+        <input type="submit" id="addBtn" value="Add" onclick="addBtn()">
+    </div>
+    <br>
+    <div>
+        <input type="text" id="deleteInput">
+        <input type="submit" id="deleteBtn" value="Delete" onclick="deleteBtn()">
+    </div>
+    <canvas id="canvasTree" width="1200" height="1200"></canvas>
+
+    <script>
+        var canvas = document.getElementById("canvasTree");
+        var context = canvas.getContext("2d");
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.font = 'bold 30px sans-serif';
+
+        var Avl_Tree = new AvlTree();
+
+        var addInput = document.getElementById('addInput');
+        //        var addBtn = document.getElementById('addBtn');
+        var deleteInput = document.getElementById('deleteInput');
+        //        var deleteBtn = document.getElementById('deleteBtn');
+
+        function addBtn() {
+            if (addInput.value != null) {
+                return Avl_Tree.add(addInput.value);
+            }
+            alert("Введите корректное значение!");
+        }
+
+        function deleteBtn() {
+            if (addInput.value != null) {
+                return Avl_Tree.delete(deleteInput.value);
+            }
+            alert("Введите корректное значение!");
+        }
+
+
+
+        //        Avl_Tree.add(10, 'd10');
+        //        Avl_Tree.add(9, 'd9');
+        //        Avl_Tree.add(2, 'd2');
+        //        Avl_Tree.add(11, 'd25');
+        //        Avl_Tree.add(8, 'd10');
+        //        Avl_Tree.add(7, 'd10');
+        //        Avl_Tree.add(13, 'd10');
+        //        Avl_Tree.add(14, 'd10');
+        //        Avl_Tree.add(15, 'd10');
+        //        Avl_Tree.add(1, 'd10');
+        //        Avl_Tree.add(5, 'd10');
+        //        Avl_Tree.add(25, 'd10');
+        //        Avl_Tree.add(20, 'd10');
+        //        Avl_Tree.add(3, 'd10');
+        //        Avl_Tree.add(4, 'd10');
+        //        Avl_Tree.add(19, 'd10');
+        //        Avl_Tree.add(34, 'd10');
+        //        Avl_Tree.add(37, 'd10');
+        //        Avl_Tree.add(44, 'd10');
+        //        Avl_Tree.add(60, 'd10');
+        //
+        //
+        //        //            Avl_Tree.delete(3);
+    </script>
+</body>
+
+</html>
